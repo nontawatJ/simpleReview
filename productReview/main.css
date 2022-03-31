@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-box img{
+    border: 1px solid black;
+}
+.star-box{
+    position:flex;
+    flex-direction: row;
+}
+.star-btm {
+    font-size: 50px;
+    padding: 10px;
+    height: 60px;
+    cursor: pointer;
+}
+#undo {
+    display: None;
+}
