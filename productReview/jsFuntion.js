@@ -1,3 +1,4 @@
+//array method
 //get all elements and put them in array
 const IDName = ["starOne","starTwo","starThree","starFour","starFive"];
 var submitReview = false;
@@ -44,6 +45,9 @@ function starClick(element){
 }
 function disableHoverEffect(numStar){
     changeStarGold(numStar);
+    if (!submitReview){
+        document.getElementById("starGot").innerHTML = "you have rated this product with " + numStar + " star(s)";
+    }
     submitReview = true;
     document.getElementById("undo").style.display = "flex";
 }
@@ -52,14 +56,13 @@ function disableHoverEffect(numStar){
 function reRating(){
     submitReview = false;
     changeStarBlack(5);
+    document.getElementById("starGot").innerHTML = "";
     document.getElementById("undo").style.display = "none";
 }
 
 
 
-
-
-
+// // Brute force method
 // const oneStar = document.getElementById("starOne");
 // const twoStar = document.getElementById("starTwo");
 // const threeStar = document.getElementById("starThree");
